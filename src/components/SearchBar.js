@@ -20,7 +20,8 @@ class SearchBar extends React.Component {
     onFormSubmit(event) {
         event.preventDefault();
 
-        console.log(this.state.term);
+        //console.log(this.state.term);
+        this.props.onSubmit(this.state.term)
     }
 
     //el handler tambien puede usarse como arrow function
