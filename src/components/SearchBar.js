@@ -7,9 +7,9 @@ class SearchBar extends React.Component {
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
-    onInputChange(event) {
+    /*onInputChange(event) {
         console.log(event.target.value);
-    }
+    }*/
 
     onInputClick() {
         console.log('Input was clicked');
@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
             <div className="ui segment">
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
-                        <label>Image Search</label>                        
+                        <label>Buscador de Imagenes</label>                        
                         <input
                             type="text"
                             value={this.state.term}

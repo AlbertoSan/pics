@@ -25,7 +25,7 @@ class App extends React.Component {
         });
         
         console.log(response.data.results);
-        this.setState({ images: response.date.results });
+        //this.setState({ images: response.date.results });
     }
 
 
@@ -35,30 +35,21 @@ class App extends React.Component {
         axios.get('https://api.unplash.com/search/photos', {
             params: { query: term },
             headers: {
-                Authorization: 'Client-ID ufhuehsfhesiufhseiufh'
+                Authorization: 'Client-ID ZIF4EQjFDpkNimOlUPQ9MUzNhqyFuX_L7sUbr5bn16o'
             }
         }).then((response) => {
             console.log(response.data.results);
         });
     }*/
     
-    render() {
-        if (!this.state.images.length) {
-            return (
-                <div className="ui container" style={{ marginTop: '10px'}}>
-                    <SearchBar onSubmit={this.onSearchSubmit} />
-                    No search start
-                    <ImageList images={this.state.images}/>
-                </div>
-            );                   
-        } else {
-            return (
+    render() {        
+        return (
             <div className="ui container" style={{ marginTop: '10px'}}>
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 Found: {this.state.images.length} images
             </div>
         );      
-        }
+        
          
     }
 };
